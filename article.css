@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --rust: #c84a1e;
+  --rust2: #e05a28;
+  --sage: #7a8c6e;
+  --sand: #d4c4a0;
+  --cream: #f2ede2;
+  --warm: #faf7f0;
+  --dark: #2c2416;
+  --muted: #7a6e5a;
+  --hand: "Lobster", cursive;
+  --sketch: "Caveat", cursive;
+  --body: "Nunito", sans-serif;
+}
+body {
+  font-family: var(--body);
+  background: var(--warm);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(44, 36, 22, 0.55);
+  backdrop-filter: blur(4px);
+}
+.nav-logo {
+  font-family: var(--hand);
+  font-size: 1.7rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* POST HERO */
+#post-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 30% 70%, #8a6a3a 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 35%, #c49a50 0%, transparent 48%),
+    radial-gradient(ellipse at 50% 100%, #5a4020 0%, transparent 55%),
+    linear-gradient(
+      to bottom,
+      #b88a48 0%,
+      #d4aa68 40%,
+      #e8c888 68%,
+      #c8a850 100%
+    );
+  filter: saturate(0.62) brightness(0.78);
+}
+#post-hero.post-hero-passero {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.2) 0%,
+      rgba(44, 36, 22, 0.1) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("passero.png") center 58% / cover no-repeat;
+  filter: none;
+}
+#post-hero.post-hero-lancia {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.22) 0%,
+      rgba(44, 36, 22, 0.12) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("lancia.png") center 66% / cover no-repeat;
+  filter: none;
+}
+#post-hero.post-hero-chemio {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.22) 0%,
+      rgba(44, 36, 22, 0.12) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("chemio.png") 65% 58% / cover no-repeat;
+  filter: none;
+}
+#post-hero.post-hero-stanza {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.22) 0%,
+      rgba(44, 36, 22, 0.12) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("offagna.png") center 58% / cover no-repeat;
+  filter: none;
+}
+#post-hero.post-hero-torrette {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.22) 0%,
+      rgba(44, 36, 22, 0.12) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("stanza.png") center 58% / cover no-repeat;
+  filter: none;
+}
+#post-hero.post-hero-ossigeno {
+  background:
+    linear-gradient(
+      to right,
+      rgba(44, 36, 22, 0.22) 0%,
+      rgba(44, 36, 22, 0.12) 40%,
+      rgba(242, 237, 226, 0.92) 72%
+    ),
+    url("torrette.png") center 24% / cover no-repeat;
+  filter: none;
+}
+.post-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 38%,
+    rgba(242, 237, 226, 0.97) 68%
+  );
+}
+.post-hero-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  max-width: 600px;
+  width: min(90%, 600px);
+  text-align: center;
+}
+/* .reveal sovrascriveva transform: qui si unisce al translate(-50%,-50%) del hero */
+.post-hero-content.reveal {
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 28px));
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.post-hero-content.reveal.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.post-title {
+  font-family: var(--hand);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  color: var(--rust);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+.post-meta {
+  font-family: var(--sketch);
+  font-size: 1rem;
+  color: var(--muted);
+}
+.back-link {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--rust);
+}
+
+/* POST CONTENT */
+#post-content {
+  background: var(--cream);
+  padding: 4rem 3rem;
+}
+.post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark);
+}
+.post-container p {
+  margin-bottom: 1.5rem;
+}
+.post-container blockquote {
+  margin: 2rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid var(--rust);
+  color: rgba(43, 36, 31, 0.82);
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.45;
+}
+.post-container blockquote p {
+  margin-bottom: 0.75rem;
+}
+.post-container blockquote cite {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(43, 36, 31, 0.62);
+}
+.post-container h2 {
+  font-family: var(--hand);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--rust);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.post-container ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.4rem;
+}
+.post-container ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.55);
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--hand);
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.48);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* SOCIAL */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.35rem;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: 38px;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
+}
+.social-btn:hover {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.social-btn svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+.social-btn span {
+  line-height: 1;
+}
+
+/* SHARE BUTTON */
+.share-btn {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.share-btn:hover {
+  background: var(--rust);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-d1 {
+  transition-delay: 0.1s;
+}
+.reveal-d2 {
+  transition-delay: 0.22s;
+}
+.reveal-d3 {
+  transition-delay: 0.34s;
+}
+.reveal-d4 {
+  transition-delay: 0.46s;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  .post-hero-content {
+    max-width: 90%;
+  }
+  .post-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+  .post-container {
+    padding: 0 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
