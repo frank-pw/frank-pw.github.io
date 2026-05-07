@@ -12,12 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="article.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html" class="nav-logo">unavoltavevolabarba</a>
-      <ul class="nav-links">
+    <nav class="!px-4 !py-3 sm:!px-8 lg:!px-12 max-[700px]:!flex-col max-[700px]:!items-center max-[700px]:!gap-3">
+      <a href="index.html" class="nav-logo max-[380px]:!text-[1.35rem]">unavoltavevolabarba</a>
+      <ul class="nav-links max-[700px]:!flex-wrap max-[700px]:!justify-center max-[700px]:!gap-x-4 max-[700px]:!gap-y-2">
         <li><a href="index.html#topics">Argomenti</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#blog">Blog</a></li>
@@ -26,7 +34,7 @@
     </nav>
 
     <!-- POST HERO -->
-    <section id="post-hero" class="post-hero-ossigeno">
+    <section id="post-hero" class="post-hero-ossigeno max-[760px]:!h-[460px] max-[520px]:!h-[430px]">
       <div class="post-hero-overlay"></div>
       <div class="post-hero-content reveal">
         <a href="index.html" class="back-link">← Torna al blog</a>
@@ -36,8 +44,8 @@
     </section>
 
     <!-- POST CONTENT -->
-    <section id="post-content">
-      <div class="post-container reveal">
+    <section id="post-content" class="max-[760px]:!px-5 max-[520px]:!px-4 max-[520px]:!py-12">
+      <div class="post-container reveal max-[760px]:!px-0 max-[520px]:!text-[1rem] max-[520px]:!leading-[1.75]">
         <p>Erano passati sei mesi dal trapianto allogenico. Febbraio 2024, e la comunicazione di recidiva dell’anno precedente sembrava ormai così lontana.</p>
 
         <p>«Quest’anno torno alle feste medievali,» dissi a Francesca. Non mi importava se fosse faticoso, volevo riprendermi la mia vita, fare ciò che amavo. «A fine settembre torniamo a Firenze.» Questi erano i programmi. Volevamo rivivere il 2022 e ci stavamo preparando per quello.</p>
@@ -75,8 +83,8 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contatti">
-      <a href="index.html" class="footer-logo">unavoltavevolabarba</a>
+    <footer id="contatti" class="max-[900px]:!flex-col max-[900px]:!gap-5 max-[900px]:!px-5 max-[900px]:!text-center">
+      <a href="index.html" class="footer-logo max-[380px]:!text-[1.4rem]">unavoltavevolabarba</a>
       <div class="social-links">
         <span class="social-title">Contatti</span>
         <a href="https://www.instagram.com/frank_pw" class="social-btn" aria-label="Instagram">

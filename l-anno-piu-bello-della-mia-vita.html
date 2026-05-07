@@ -12,12 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="article.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html" class="nav-logo">unavoltavevolabarba</a>
-      <ul class="nav-links">
+    <nav class="!px-4 !py-3 sm:!px-8 lg:!px-12 max-[700px]:!flex-col max-[700px]:!items-center max-[700px]:!gap-3">
+      <a href="index.html" class="nav-logo max-[380px]:!text-[1.35rem]">unavoltavevolabarba</a>
+      <ul class="nav-links max-[700px]:!flex-wrap max-[700px]:!justify-center max-[700px]:!gap-x-4 max-[700px]:!gap-y-2">
         <li><a href="index.html#topics">Argomenti</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#blog">Blog</a></li>
@@ -26,7 +34,7 @@
     </nav>
 
     <!-- POST HERO -->
-    <section id="post-hero" class="post-hero-stanza">
+    <section id="post-hero" class="post-hero-stanza max-[760px]:!h-[460px] max-[520px]:!h-[430px]">
       <div class="post-hero-overlay"></div>
       <div class="post-hero-content reveal">
         <a href="index.html" class="back-link">← Torna al blog</a>
@@ -36,8 +44,8 @@
     </section>
 
     <!-- POST CONTENT -->
-    <section id="post-content">
-      <div class="post-container reveal">
+    <section id="post-content" class="max-[760px]:!px-5 max-[520px]:!px-4 max-[520px]:!py-12">
+      <div class="post-container reveal max-[760px]:!px-0 max-[520px]:!text-[1rem] max-[520px]:!leading-[1.75]">
         <p>Il 2022 era appena iniziato. Dopo aver trascorso un Natale e un Capodanno sereni, vivevo la mia vita insieme alla mia compagna, che nel frattempo si era trasferita a casa mia. Suonavo i miei strumenti musicali, giocavo ai videogiochi, leggevo libri e, ovviamente, ascoltavo musica. Facevo regolarmente controlli e visite in ospedale: analisi del sangue a domicilio, visite settimanali e prelievi del midollo a cadenza mensile, che poi sarebbero diventati trimestrali. Pensavo solo a restare tranquillo. Onestamente, credo che senza di lei non ce l’avrei mai fatta ad affrontare la convalescenza.</p>
 
         <p>Uscivo poco. Tra il Covid che circolava e il freddo, mi rintanavo in casa, al caldo. Di tanto in tanto, nei giorni feriali e di prima mattina, andavamo a passeggiare al centro commerciale; se c’era il sole, ci limitavamo alla stradina sotto casa. Era meraviglioso sentire il calore della luce sul viso. Seguivo la dieta con tutte le restrizioni del caso: niente cibi crudi, verdure solo surgelate, quelle fresche avrei dovuto lavarle con l’Amuchina, col rischio di rovinarne il sapore. Mi nutrivo di pizza surgelata, Sofficini, minestroni pronti. Era limitante, ma non mi importava: ero felice di aver fatto il trapianto autologo e mi godevo la vita giorno per giorno. Avevo perso il senso del gusto per via di una pillola di mantenimento che dovevo prendere quotidianamente per tenere a bada la malattia che avevo sconfitto, ma nonostante questo tornai a giocare online con i miei amici e a comprare vestiti per prepararmi alla primavera e all’estate.</p>
@@ -73,8 +81,8 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contatti">
-      <a href="index.html" class="footer-logo">unavoltavevolabarba</a>
+    <footer id="contatti" class="max-[900px]:!flex-col max-[900px]:!gap-5 max-[900px]:!px-5 max-[900px]:!text-center">
+      <a href="index.html" class="footer-logo max-[380px]:!text-[1.4rem]">unavoltavevolabarba</a>
       <div class="social-links">
         <span class="social-title">Contatti</span>
         <a href="https://www.instagram.com/frank_pw" class="social-btn" aria-label="Instagram">

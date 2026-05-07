@@ -12,12 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="article.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html" class="nav-logo">unavoltavevolabarba</a>
-      <ul class="nav-links">
+    <nav class="!px-4 !py-3 sm:!px-8 lg:!px-12 max-[700px]:!flex-col max-[700px]:!items-center max-[700px]:!gap-3">
+      <a href="index.html" class="nav-logo max-[380px]:!text-[1.35rem]">unavoltavevolabarba</a>
+      <ul class="nav-links max-[700px]:!flex-wrap max-[700px]:!justify-center max-[700px]:!gap-x-4 max-[700px]:!gap-y-2">
         <li><a href="index.html#topics">Argomenti</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#blog">Blog</a></li>
@@ -26,9 +34,9 @@
     </nav>
 
     <!-- POST HERO -->
-    <section id="post-hero">
+    <section id="post-hero" class="max-[760px]:!h-[460px] max-[520px]:!h-[430px]">
       <div class="post-hero-overlay"></div>
-      <div class="post-hero-content reveal">
+      <div class="post-hero-content reveal max-[760px]:!w-[88%]">
         <a href="index.html#topics" class="back-link">← Torna agli argomenti</a>
         <h1 class="post-title">Vademecum anti-nausea da chemioterapia</h1>
         <p class="post-meta">7 maggio 2025 • 8 min</p>
@@ -36,29 +44,29 @@
     </section>
 
     <!-- POST CONTENT -->
-    <section id="post-content">
-      <div class="post-container reveal">
+    <section id="post-content" class="max-[760px]:!px-5 max-[520px]:!px-4 max-[520px]:!py-12">
+      <div class="post-container reveal max-[760px]:!px-0 max-[520px]:!text-[1rem] max-[520px]:!leading-[1.75]">
         <p>Ho provato zenzero, meditazione e minacciare il mio stomaco. Il mio stomaco non negozia.</p>
 
         <p>La nausea da chemioterapia colpisce fino all'80% dei pazienti. È uno degli effetti collaterali più odiati, non perché sia il più grave, ma perché non smette mai al momento giusto.</p>
 
         <p>Quello che ho trovato, tra studi e consigli pratici, è che alcune cose aiutano davvero. Altre funzionano "abbastanza" da valere comunque la pena. Le metto qui tutte insieme.</p>
 
-        <p><h2>Prima cosa: dillo al medico.</h2></p>
+        <p><h2>Prima cosa: dillo al medico</h2></p>
         <p>Se la nausea è forte e non stai prendendo nulla di specifico, ci sono farmaci che funzionano bene. Non è una resa chiedere un aggiustamento della terapia. È l'unica cosa sensata.</p>
 
-        <p><h2>Lo zenzero funziona, ma come supporto.</h2></p>
+        <p><h2>Lo zenzero funziona, ma come supporto</h2></p>
         <p>Uno studio dell'University of Rochester su oltre 400 pazienti ha mostrato che aggiungere zenzero ai farmaci standard riduce la nausea del 40%. Non da solo, insieme agli antiemetici. In pratica: tisana con zenzero fresco, limone e menta, oppure zenzero candito da tenere a portata di mano. Non esagerare con le dosi: dosi eccessive irritano lo stomaco, il che sarebbe controproducente.</p>
 
-        <p><h2>Il braccialetto sul polso.</h2></p>
+        <p><h2>Il braccialetto sul polso</h2></p>
         <p>C'è un punto di agopressione sul polso interno, tre dita sopra la piega, chiamato P6. I braccialetti anti-nausea da viaggio lo stimolano. Una meta-analisi del 2021 su quasi 1.500 pazienti li ha trovati utili soprattutto per la nausea dei giorni dopo la seduta. Costano poco, non fanno male, vale la pena provarli.</p>
 
-        <p><h2>Mangiare: le regole che nessuno vuole sentire.</h2></p>
+        <p><h2>Mangiare: le regole che nessuno vuole sentire</h2></p>
         <p>Pasti piccoli e frequenti — lo stomaco vuoto peggiora tutto. Cibi asciutti e insipidi: crackers, fette biscottate, gallette di riso. Temperatura ambiente o fredda, perché il caldo esalta gli odori.</p>
 
         <p>Un consiglio che mi ha colpito, firmato AIMAC: non mangiare il tuo piatto preferito nei giorni della chemio. Il cervello rischia di associarlo alla nausea e di rifiutarlo a lungo. Difendi i tuoi comfort food.</p>
 
-        <p><h2>La nausea che arriva prima.</h2></p>
+        <p><h2>La nausea che arriva prima</h2></p>
         <p>C'è una forma di nausea anticipatoria che compare prima della seduta, il corpo ha imparato ad associare certi ambienti o odori alla nausea precedente e parte in anticipo. Un capolavoro di autolesionismo neurologico. Musica o podcast durante il tragitto aiutano (distrazione attiva), così come un odore diverso che spezzi l'associazione. Nei casi seri, il medico può valutare un ansiolitico.</p>
 
         <p>La nausea da chemio non è una tassa obbligatoria. È un sintomo trattabile. Se quello che stai usando non basta, ci sono ancora cose da provare, vale la pena insistere.</p>
@@ -66,9 +74,9 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contatti">
-      <a href="index.html" class="footer-logo">unavoltavevolabarba</a>
-      <div class="social-links">
+    <footer id="contatti" class="max-[900px]:!flex-col max-[900px]:!gap-5 max-[900px]:!px-5 max-[900px]:!text-center">
+      <a href="index.html" class="footer-logo max-[380px]:!text-[1.4rem]">unavoltavevolabarba</a>
+      <div class="social-links max-[900px]:!justify-center max-[520px]:!gap-2">
         <span class="social-title">Contatti</span>
         <a href="https://www.instagram.com/frank_pw" class="social-btn" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

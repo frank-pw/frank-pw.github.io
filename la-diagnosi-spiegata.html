@@ -12,12 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="article.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html" class="nav-logo">unavoltavevolabarba</a>
-      <ul class="nav-links">
+    <nav class="!px-4 !py-3 sm:!px-8 lg:!px-12 max-[700px]:!flex-col max-[700px]:!items-center max-[700px]:!gap-3">
+      <a href="index.html" class="nav-logo max-[380px]:!text-[1.35rem]">unavoltavevolabarba</a>
+      <ul class="nav-links max-[700px]:!flex-wrap max-[700px]:!justify-center max-[700px]:!gap-x-4 max-[700px]:!gap-y-2">
         <li><a href="index.html#topics">Argomenti</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#blog">Blog</a></li>
@@ -25,7 +33,7 @@
       </ul>
     </nav>
 
-    <section id="post-hero">
+    <section id="post-hero" class="max-[760px]:!h-[460px] max-[520px]:!h-[430px]">
       <div class="post-hero-overlay"></div>
       <div class="post-hero-content reveal">
         <a href="index.html#topics" class="back-link">← Torna agli argomenti</a>
@@ -34,8 +42,8 @@
       </div>
     </section>
 
-    <section id="post-content">
-      <div class="post-container reveal">
+    <section id="post-content" class="max-[760px]:!px-5 max-[520px]:!px-4 max-[520px]:!py-12">
+      <div class="post-container reveal max-[760px]:!px-0 max-[520px]:!text-[1rem] max-[520px]:!leading-[1.75]">
         <!-- Scrivi il testo di questa pagina qui sotto. -->
         <p>Questo non è un articolo scientifico. È quello che avrei voluto leggere io il giorno della diagnosi.</p>
 
@@ -81,8 +89,8 @@
       </div>
     </section>
 
-    <footer id="contatti">
-      <a href="index.html" class="footer-logo">unavoltavevolabarba</a>
+    <footer id="contatti" class="max-[900px]:!flex-col max-[900px]:!gap-5 max-[900px]:!px-5 max-[900px]:!text-center">
+      <a href="index.html" class="footer-logo max-[380px]:!text-[1.4rem]">unavoltavevolabarba</a>
     </footer>
 
     <script src="script.js"></script>

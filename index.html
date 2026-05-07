@@ -12,12 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.tailwind = {
+        config: {
+          corePlugins: { preflight: false },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a href="#" class="nav-logo">unavoltavevolabarba</a>
-      <ul class="nav-links">
+    <nav class="!px-4 !py-3 sm:!px-8 lg:!px-12 max-[700px]:!flex-col max-[700px]:!items-center max-[700px]:!gap-3">
+      <a href="#" class="nav-logo max-[380px]:!text-[1.35rem]">unavoltavevolabarba</a>
+      <ul class="nav-links max-[700px]:!flex-wrap max-[700px]:!justify-center max-[700px]:!gap-x-4 max-[700px]:!gap-y-2">
         <li><a href="#topics">Argomenti</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#blog">Blog</a></li>
@@ -26,15 +34,15 @@
     </nav>
 
     <!-- HERO -->
-    <section id="hero">
+    <section id="hero" class="max-[760px]:!min-h-[720px] max-[760px]:!items-end max-[760px]:!pb-14 max-[520px]:!min-h-[680px]">
       <div class="hero-bg"></div>
 
-      <div class="hero-image-wrap">
+      <div class="hero-image-wrap max-[760px]:!w-[76%] max-[760px]:!right-[-18%] max-[760px]:!top-[16%] max-[520px]:!w-[86%] max-[520px]:!right-[-28%]">
         <img class="hero-image" src="hero.png" alt="Francesco" />
       </div>
 
-      <div class="hero-content">
-        <h1 class="hero-title is-thoughts">
+      <div class="hero-content max-[760px]:!px-5 max-[760px]:!max-w-[92vw]">
+        <h1 class="hero-title is-thoughts max-[520px]:!text-[3rem] max-[380px]:!text-[2.55rem]">
           Pensieri che<br />
           attraversano<br />
           il <em><span id="jp-typewriter-word" aria-live="polite">silenzio</span></em>
@@ -56,8 +64,8 @@
     -->
 
     <!-- TOPICS -->
-    <section id="topics">
-      <div class="topics-heading reveal">
+    <section id="topics" class="max-[760px]:!px-5 max-[520px]:!px-4">
+      <div class="topics-heading reveal max-[520px]:!mb-7">
         <h2 class="topics-title">argomenti</h2>
         <p class="topics-subtitle">
           Idee, domande e pezzi di vita da usare come tracce per raccontare la
@@ -65,7 +73,7 @@
         </p>
       </div>
 
-      <div class="topics-grid">
+      <div class="topics-grid md:!grid-cols-2 lg:!grid-cols-3 max-[520px]:!grid-cols-1 max-[520px]:!gap-3">
         <a href="la-diagnosi-spiegata.html" class="topic-card reveal reveal-d1">
           <h3 class="topic-title">La diagnosi spiegata a chi come me non capisce la medicina</h3>
           <div class="topic-note">leucemia</div>
@@ -94,14 +102,14 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
-      <div class="about-photo">
+    <section id="about" class="max-[860px]:!grid-cols-1">
+      <div class="about-photo max-[860px]:!min-h-[320px] max-[520px]:!min-h-[240px]">
         <div class="about-photo-bg"></div>
         <div class="about-photo-overlay"></div>
         <img src="papaveri.png" alt="Papaveri" class="about-image" />
         <canvas id="papaveri-canvas" class="papaveri-canvas"></canvas>
       </div>
-      <div class="about-content">
+      <div class="about-content max-[860px]:!p-8 max-[520px]:!p-5">
         <h2 class="about-title reveal">about me</h2>
         <p class="about-bio reveal reveal-d1">
           Mi chiamo Francesco, pesco idee da ogni angolo: la musica,
@@ -124,13 +132,13 @@
     </section>
 
     <!-- BLOG -->
-    <section id="blog">
+    <section id="blog" class="max-[760px]:!px-4 max-[520px]:!px-3">
       <div class="blog-heading reveal">
         <h2 class="blog-section-title">blog</h2>
         <p class="blog-section-subtitle">cose che ho scritto ultimamente</p>
       </div>
 
-      <div class="posts-container">
+      <div class="posts-container sm:!grid-cols-2 lg:!grid-cols-3 max-[639px]:!grid-cols-1 max-[639px]:!max-w-[420px]">
         <a href="un-giorno-qualunque.html" class="post-item reveal">
           <div class="post-media">
             <img src="lancia.png" alt="" class="post-image-lancia" />
@@ -217,9 +225,9 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contatti">
-      <a href="#" class="footer-logo">unavoltavevolabarba</a>
-      <div class="social-links">
+    <footer id="contatti" class="max-[900px]:!flex-col max-[900px]:!gap-5 max-[900px]:!px-5 max-[900px]:!text-center">
+      <a href="#" class="footer-logo max-[380px]:!text-[1.4rem]">unavoltavevolabarba</a>
+      <div class="social-links max-[900px]:!justify-center max-[520px]:!gap-2">
         <span class="social-title">Contatti</span>
         <a href="https://www.instagram.com/frank_pw" class="social-btn" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
