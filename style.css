@@ -234,7 +234,7 @@ nav {
 
 /* TOPICS */
 #topics {
-  background: var(--warm);
+  background: #e9e9e7;
   padding: 4.5rem 3rem 5rem;
 }
 .topics-heading {
